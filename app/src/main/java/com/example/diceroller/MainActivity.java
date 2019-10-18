@@ -36,8 +36,7 @@ public class MainActivity extends AppCompatActivity {
         else if((usrNumber < 1)||(usrNumber > 6)){
             tv.setText("Invalid number");
         }
-        else {
+        else
             tv.setText(Integer.toString(number));
-        }
     }
 }
