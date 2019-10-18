@@ -18,8 +18,20 @@ public class MainActivity extends AppCompatActivity {
 
     public void on_button_click(View view){
          TextView tv = this.findViewById(R.id.textView);
-        Random r = new Random();
+         TextView inputbox = this.findViewById(R.id.input);
+
+         int usrNumber = Integer.parseInt(inputbox.getText().toString());
+         Random r = new Random();
         int number = r.nextInt(7);
-        tv.setText(Integer.toString(number));
+
+        if(usrNumber == number){
+            tv.setText("Congratulations!");
+        }
+        else if((usrNumber < 1)||(usrNumber > 6)){
+            tv.setText("Invalid number");
+        }
+        else {
+            tv.setText(Integer.toString(number));
+        }
     }
 }

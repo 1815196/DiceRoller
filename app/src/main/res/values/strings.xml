@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DiceRoller</string>
+    <string name="rtd">RTD</string>
+    <string name="welcome">Welcome</string>
+    <string name="hint" />
+    <string name="enter_number_1_6">Enter number (1–6)</string>
 </resources>
