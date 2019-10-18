@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,14 +20,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void on_button_click(View view){
          TextView tv = this.findViewById(R.id.textView);
-         TextView inputbox = this.findViewById(R.id.input);
+         TextView inputBox = this.findViewById(R.id.input);
+         TextView scoreBox = this.findViewById(R.id.scoreNumber);
 
-         int usrNumber = Integer.parseInt(inputbox.getText().toString());
+         int usrNumber = Integer.parseInt(inputBox.getText().toString());
          Random r = new Random();
-        int number = r.nextInt(7);
+         int number = r.nextInt(6)+1;
+         int score = Integer.parseInt(scoreBox.getText().toString());
 
         if(usrNumber == number){
             tv.setText("Congratulations!");
+            score++;
+            scoreBox.setText(Integer.toString(score));
         }
         else if((usrNumber < 1)||(usrNumber > 6)){
             tv.setText("Invalid number");

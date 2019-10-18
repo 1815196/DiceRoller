@@ -4,4 +4,6 @@
     <string name="welcome">Welcome</string>
     <string name="hint" />
     <string name="enter_number_1_6">Enter number (1–6)</string>
+    <string name="score">Score:</string>
+    <string name="_0">0</string>
 </resources>
